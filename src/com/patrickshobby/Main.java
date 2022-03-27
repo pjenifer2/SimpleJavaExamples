@@ -5,9 +5,9 @@ package com.patrickshobby;
 public class Main {
 
     public static void main(String[] args) {
-	DetermineNumbers();
-    CountVowels();
-    FizzBizz();
+        DetermineNumbers();
+        CountVowels();
+        FizzBizz();
     }
 
     private static void FizzBizz() {
