@@ -34,7 +34,7 @@ public class Main {
     }
 
     private static void CountVowels() {
-            String sample = "Empire Strikes Back";
+            String sample = "Star Wars: Empire Strikes Back";
             sample = sample.toLowerCase();
             int countOfVowels = 0;
 
