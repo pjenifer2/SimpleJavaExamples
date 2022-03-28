@@ -6,13 +6,19 @@ public class Flight {
 
     //example of constructor
     Flight() {
-        seats = 150;
+        seats = 1;
         passengers = 0;
     }
 
     void add1Passenger() {
         if (passengers < seats){
             passengers++;
+        } else {
+            handleTooMany();
         }
+    }
+
+    private void handleTooMany() {
+        System.out.println("Too Many!");
     }
 }

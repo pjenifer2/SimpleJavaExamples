@@ -5,19 +5,22 @@ package com.patrickshobby;
 public class Main {
 
     public static void main(String[] args) {
-        //DetermineNumbers();
+
         FizzBizz();
+        DetermineNumbers();
 
         String title = "Star Wars: Empire Strikes Back!";
-        title = title.toLowerCase();
+        String lowerCaseTitle = title.toLowerCase();
         CountVowels movie = new CountVowels();
-        movie.sample = title;
-        int result = movie.CountVowels();
+        movie.setText(lowerCaseTitle);
+        int result = movie.getCountVowels();
         System.out.println("The movie title : " + title + " has " + result + " vowels in it!");
 
 
         Flight nycToLv;
         nycToLv = new Flight();
+        System.out.println(nycToLv.passengers);
+        nycToLv.add1Passenger();
         System.out.println(nycToLv.passengers);
         nycToLv.add1Passenger();
         System.out.println(nycToLv.passengers);
