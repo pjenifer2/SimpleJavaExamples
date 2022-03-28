@@ -5,9 +5,23 @@ package com.patrickshobby;
 public class Main {
 
     public static void main(String[] args) {
-        DetermineNumbers();
-        CountVowels();
+        //DetermineNumbers();
         FizzBizz();
+
+        String title = "Star Wars: Empire Strikes Back!";
+        title = title.toLowerCase();
+        CountVowels movie = new CountVowels();
+        movie.sample = title;
+        int result = movie.CountVowels();
+        System.out.println("The movie title : " + title + " has " + result + " vowels in it!");
+
+
+        Flight nycToLv;
+        nycToLv = new Flight();
+        System.out.println(nycToLv.passengers);
+        nycToLv.add1Passenger();
+        System.out.println(nycToLv.passengers);
+
     }
 
     private static void FizzBizz() {
@@ -35,21 +49,7 @@ public class Main {
 
 
 
-    private static void CountVowels() {
-            String sample = "Star Wars: Empire Strikes Back";
-            sample = sample.toLowerCase();
-            int countOfVowels = 0;
 
-            for (int i = 0; i < sample.length(); i++){
-                char letter = sample.charAt(i);
-                if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u') {
-                    countOfVowels++;
-                }
-
-            }
-
-            System.out.println("The number of vowels in the string " + sample + " is " + countOfVowels);
-        }
 
 
     private static void DetermineNumbers() {
