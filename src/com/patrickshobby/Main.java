@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        FizzBizz();
+        //FizzBizz();
         DetermineNumbers();
 
         String title = "Star Wars: Empire Strikes Back!";
@@ -17,13 +17,18 @@ public class Main {
         System.out.println("The movie title : " + title + " has " + result + " vowels in it!");
 
 
-        Flight nycToLv;
-        nycToLv = new Flight();
-        System.out.println(nycToLv.passengers);
+
+        Flight nycToLv = new Flight(123, 100);
+        System.out.println(nycToLv.getPassengerCount());
         nycToLv.add1Passenger();
-        System.out.println(nycToLv.passengers);
+        System.out.println(nycToLv.getPassengerCount());
         nycToLv.add1Passenger();
-        System.out.println(nycToLv.passengers);
+        System.out.println(nycToLv.getPassengerCount());
+        
+
+
+        Passenger luke = new Passenger(3,3);
+        System.out.println("The per bag fee is: " + luke.getPerBagFee());
 
     }
 

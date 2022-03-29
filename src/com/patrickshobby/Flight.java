@@ -1,14 +1,28 @@
 package com.patrickshobby;
 
 public class Flight {
-    int passengers;
-    int seats;
+    private int passengers;
+    private int seats = 150;
+    private int flightNumber;
+    private char flightClass;
+    private boolean[] isSeatAvailable = new boolean[seats];
 
-    //example of constructor
-    Flight() {
-        seats = 1;
-        passengers = 0;
+    //initializer
+    {
+        for (int i = 0; i < seats; i++){
+            isSeatAvailable[i] = true;
+        }
     }
+
+    public Flight(int flightNumber, int passengers) {
+        this.flightNumber = flightNumber;
+        this.passengers = passengers;
+    }
+
+    public Flight(char flightClass){
+        this.flightClass = flightClass;
+    }
+
 
     void add1Passenger() {
         if (passengers < seats){
@@ -21,4 +35,9 @@ public class Flight {
     private void handleTooMany() {
         System.out.println("Too Many!");
     }
+
+    public int getPassengerCount() {
+        return passengers;
+    }
+
 }
