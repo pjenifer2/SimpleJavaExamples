@@ -6,9 +6,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //FizzBizz();
-        DetermineNumbers();
+        //for (int i = 1; i < 18; i++) System.out.println(Factorial(i));
 
+        System.out.println(reverse("coderbyte"));
+
+
+
+
+
+
+
+
+
+        //FizzBizz();
+        //DetermineNumbers();
+
+        /*
         String title = "Star Wars: Empire Strikes Back!";
         String lowerCaseTitle = title.toLowerCase();
         CountVowels movie = new CountVowels();
@@ -24,12 +37,41 @@ public class Main {
         System.out.println(nycToLv.getPassengerCount());
         nycToLv.add1Passenger();
         System.out.println(nycToLv.getPassengerCount());
-        
+
 
 
         Passenger luke = new Passenger(3,3);
         System.out.println("The per bag fee is: " + luke.getPerBagFee());
 
+
+         */
+    }
+
+    private static String reverse(String str){
+        char[] result = new char[str.length()];
+        int j = 0;
+
+        for (int i = (str.length()-1); i >= 0; i--){
+            result[j] = str.charAt(i);
+            j++;
+            //System.out.println(str.charAt(i));
+        }
+
+        str = String.valueOf(result);
+        return str;
+
+    }
+
+    private static int Factorial(int num) {
+        int total = num;
+
+        for (int i = (num-1); i > 0 ; i--){
+            total = total * i;
+            //System.out.println(total);
+        }
+
+        num = total;
+        return num;
     }
 
     private static void FizzBizz() {
